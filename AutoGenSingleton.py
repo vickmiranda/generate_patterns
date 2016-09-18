@@ -19,5 +19,5 @@ class $class_name(object):
 output = CLASS_SINGLETON_TEMPLATE.substitute(class_name='MySingleton',
                                              attributes='my_list',
                                              properties=None)
-with open('singleton.py', 'wb') as f:
+with open('auto_singleton.py', 'wb') as f:
     f.write(output)
