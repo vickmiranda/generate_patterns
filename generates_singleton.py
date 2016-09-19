@@ -11,10 +11,10 @@ class $class_name(object):
         return $class_name._instance
 
     def __init__(self):
-        self.attribute_name = []
+        self.$attribute_name = []
 
     def $method_name(self):
-        self.attribute_name.append("Element1 added")
+        self.$attribute_name.append("Element1 added")
 
 singleton1 = $class_name()
 singleton2 = $class_name()
