@@ -1,8 +1,13 @@
 from string import Template
+from datetime import date
 
 CLASS_SINGLETON_TEMPLATE = Template('''\
 from abc import ABCMeta, abstractmethod
+\'''
+This script was auto-generated on $date
 
+Few things to adapt and is ready for you to use
+\'''
 
 class $class_interface(object):
     __metadata__ = ABCMeta
@@ -90,13 +95,14 @@ output = CLASS_SINGLETON_TEMPLATE.substitute(class_interface='MyInterface',
                                              initialize_method='initialize',
                                              method1='run_method',
                                              cleanup_method='cleanup',
-                                             concrete_product1='Product1',
-                                             concrete_product2='Product2',
+                                             concrete_product1='Scope',
+                                             concrete_product2='PowerMeter',
                                              class_creator='Configure',
-                                             attribute_list='products',
-                                             attribute='product',
-                                             class_concrete_creator_one='ConfigurationOne',
-                                             class_concrete_creator_two='ConfigurationTwo'
+                                             attribute_list='instruments',
+                                             attribute='instrument',
+                                             class_concrete_creator_one='Rack1',
+                                             class_concrete_creator_two='Rack2',
+                                             date=date.today()
                                              )
 
 with open('auto_factory_method.py', 'wb') as f:
