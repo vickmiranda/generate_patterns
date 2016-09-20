@@ -1,2 +1,2 @@
 # auto_patterns
-Generate basic patterns templates for you not to start from scratch
+Generate basic patterns templates so one does not start from scratch
