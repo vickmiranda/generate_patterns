@@ -93,10 +93,10 @@ if __name__ == '__main__':
 
 output = CLASS_SINGLETON_TEMPLATE.substitute(class_interface='MyInterface',
                                              initialize_method='initialize',
-                                             method1='measure',
+                                             method1='run_test',
                                              cleanup_method='cleanup',
                                              concrete_product1='Scope',
-                                             concrete_product2='PowerSupply',
+                                             concrete_product2='Analyzer',
                                              class_creator='Configure',
                                              attribute_list='instruments',
                                              attribute='instrument',
