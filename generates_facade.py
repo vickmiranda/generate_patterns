@@ -1,14 +1,7 @@
 from string import Template
 from datetime import date
 
-CLASS_SINGLETON_TEMPLATE = Template('''\
-from abc import ABCMeta, abstractmethod
-\'''
-This script was auto-generated on $date
-
-Few things to adapt and is ready for you to use
-\'''
-
+CLASS_FACADE_TEMPLATE = Template('''\
 class $class_facade(object):
     def __init__(self):
         sub_one = $class_system_one()
@@ -63,7 +56,7 @@ if __name__ == '__main__':
 \
 ''')
 
-output = CLASS_SINGLETON_TEMPLATE.substitute(class_facade='MyFacade',
+output = CLASS_FACADE_TEMPLATE.substitute(class_facade='MyFacade',
                                              class_system_one='SubSystemOne',
                                              class_system_two='SubSystemTwo',
                                              class_system_three='SubSystemThree',
